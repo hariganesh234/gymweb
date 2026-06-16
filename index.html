@@ -290,7 +290,7 @@
                             "Club 19 is not just a gym; it is a total lifestyle upgrade. Training with their biomechanically optimized machines and accessing the recovery lounge post-workout has been incredible."
                         </p>
                         <div class="testimonial-author">
-                            <span class="author-name">Clara Oswald</span>
+                            <span class="author-name">Karthik Raja</span>
                             <span class="author-title">Competitive Athlete</span>
                         </div>
                     </div>
@@ -301,7 +301,7 @@
                             "I expected typical gym compromises. Instead, I found top-tier coaching, absolute clean training zones, and private steam/ice recovery facilities. Absolute value for money."
                         </p>
                         <div class="testimonial-author">
-                            <span class="author-name">Marcus Vance</span>
+                            <span class="author-name">Vikram Ramakrishnan</span>
                             <span class="author-title">Entrepreneur</span>
                         </div>
                     </div>
@@ -327,6 +327,7 @@
                             <span class="career-loc">Premium Access</span>
                         </div>
                         <h3 class="career-title">Elite Annual Membership</h3>
+                        <p class="career-description" style="color: #E2B65C; font-weight: 700; font-size: 18px; margin-top: 4px; margin-bottom: 8px;">₹3,500 <span style="font-size: 13px; font-weight: 500; color: var(--color-text-secondary);">/ month (Billed Annually)</span></p>
                         <p class="career-description">Unlimited access to all strength zones, cardio decks, and group fitness classes. Includes 6 custom personal training sessions and monthly body composition assessments.</p>
                         <a href="https://wa.me/917845738595?text=I%20am%20interested%20in%20the%20Elite%20Annual%20Membership" target="_blank" class="career-link" id="career-link-1">Select Elite Tier <span class="arrow">→</span></a>
                     </div>
@@ -337,6 +338,7 @@
                             <span class="career-loc">All-Inclusive VIP</span>
                         </div>
                         <h3 class="career-title">VIP Club 19 Platinum</h3>
+                        <p class="career-description" style="color: #E2B65C; font-weight: 700; font-size: 18px; margin-top: 4px; margin-bottom: 8px;">₹12,000 <span style="font-size: 13px; font-weight: 500; color: var(--color-text-secondary);">/ month</span></p>
                         <p class="career-description">All-access membership plus 1-on-1 premium daily personal training, tailored nutritional program design, private locker service, and unlimited access to the steam & ice recovery spa.</p>
                         <a href="https://wa.me/917845738595?text=I%20am%20interested%20in%20the%20VIP%20Club%2019%20Platinum%20Membership" target="_blank" class="career-link" id="career-link-2">Select VIP Platinum <span class="arrow">→</span></a>
                     </div>
@@ -360,19 +362,19 @@
                         <span class="resource-type">Strength</span>
                         <h3 class="resource-title">Powerlifting & Strength</h3>
                         <p class="resource-excerpt">Master proper compound lift mechanics, squat-bench-deadlift progressions, and metabolic conditioning loops with certified coaches.</p>
-                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20Powerlifting%20and%20Strength%20class%20schedule" target="_blank" class="resource-action" id="resource-download-1">View Schedule <span class="arrow">→</span></a>
+                        <a href="schedule.html" class="resource-action" id="resource-download-1">View Schedule <span class="arrow">→</span></a>
                     </div>
                     <div class="resource-card">
                         <span class="resource-type">Endurance</span>
                         <h3 class="resource-title">HIIT & Skillmill Training</h3>
                         <p class="resource-excerpt">High-intensity athletic conditioning intervals utilizing premium curved manual treadmills, rowers, and dynamic weight circuits.</p>
-                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20HIIT%20and%20Skillmill%20class%20schedule" target="_blank" class="resource-action" id="resource-download-2">View Schedule <span class="arrow">→</span></a>
+                        <a href="schedule.html" class="resource-action" id="resource-download-2">View Schedule <span class="arrow">→</span></a>
                     </div>
                     <div class="resource-card">
                         <span class="resource-type">Flexibility</span>
                         <h3 class="resource-title">Yoga & Core Mobility</h3>
                         <p class="resource-excerpt">Improve posture, target functional core strength, and enhance overall joint range of motion through athletic mobility protocols.</p>
-                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20Yoga%20and%20Core%20Mobility%20class%20schedule" target="_blank" class="resource-action" id="resource-download-3">View Schedule <span class="arrow">→</span></a>
+                        <a href="schedule.html" class="resource-action" id="resource-download-3">View Schedule <span class="arrow">→</span></a>
                     </div>
                 </div>
                 <div class="view-more-container stagger-item">
@@ -392,7 +394,7 @@
                     <p class="footer-desc">Madurai's pinnacle premium fitness and recovery sanctuary.</p>
                     <div class="footer-status">
                         <span class="status-pulse"></span>
-                        <span class="status-text">Open Daily — Mon-Sat: 5AM - 10PM, Sun: 6AM - 12PM</span>
+                        <span class="status-text">Open Daily — Mon-Sat: 5AM - 10PM, Sun: 6AM - 12PM (Noon)</span>
                     </div>
                 </div>
                 
@@ -436,13 +438,14 @@
 
     <!-- Lenis Smooth Scroll Library -->
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="live-background.js"></script>
 
     <!-- Interactive script to showcase toggle functionality, parallax & entrance reveals -->
     <script>
         const heroContainer = document.getElementById('hero-container');
 
         // Entrance animation (Word splitting/Blur/Mask reveals) for the Hero section
-        function startEntranceAnimations() {
+        function startEntranceAnimations(instant = false) {
             const headlineLine1 = document.getElementById('headline-line1');
             const headlineLine2 = document.getElementById('headline-line2');
             
@@ -457,7 +460,15 @@
                     const inner = document.createElement('span');
                     inner.className = 'word-inner';
                     inner.textContent = word + (index < words.length - 1 ? '\u00A0' : ''); // Preserve whitespace
-                    inner.style.transitionDelay = `${startDelay + (index * 90)}ms`;
+                    if (instant) {
+                        inner.style.transition = 'none';
+                        inner.style.transitionDelay = '0ms';
+                        inner.style.opacity = '1';
+                        inner.style.filter = 'none';
+                        inner.style.transform = 'none';
+                    } else {
+                        inner.style.transitionDelay = `${startDelay + (index * 90)}ms`;
+                    }
                     
                     mask.appendChild(inner);
                     element.appendChild(mask);
@@ -465,31 +476,60 @@
             }
 
             // Stagger line 1 first, then line 2
-            if (headlineLine1) splitTextIntoWords(headlineLine1, 150);
-            if (headlineLine2) splitTextIntoWords(headlineLine2, 500);
+            if (headlineLine1) splitTextIntoWords(headlineLine1, instant ? 0 : 150);
+            if (headlineLine2) splitTextIntoWords(headlineLine2, instant ? 0 : 500);
 
             // Trigger animations
             requestAnimationFrame(() => {
-                // Reveal headline words
-                setTimeout(() => {
+                if (instant) {
                     const inners = document.querySelectorAll('.word-inner');
-                    inners.forEach(inner => inner.classList.add('reveal'));
-                }, 50);
+                    inners.forEach(inner => {
+                        inner.classList.add('reveal');
+                        inner.style.transition = 'none';
+                        inner.style.opacity = '1';
+                        inner.style.filter = 'none';
+                        inner.style.transform = 'none';
+                    });
+                    
+                    const navbar = document.getElementById('navbar');
+                    if (navbar) {
+                        navbar.classList.add('reveal');
+                        navbar.style.transition = 'none';
+                    }
+                    
+                    const toggleWrapper = document.getElementById('toggle-wrapper');
+                    if (toggleWrapper) {
+                        toggleWrapper.classList.add('reveal');
+                        toggleWrapper.style.transition = 'none';
+                    }
+                    
+                    const heroSubtext = document.getElementById('hero-subtext');
+                    if (heroSubtext) {
+                        heroSubtext.classList.add('reveal');
+                        heroSubtext.style.transition = 'none';
+                    }
+                } else {
+                    // Reveal headline words
+                    setTimeout(() => {
+                        const inners = document.querySelectorAll('.word-inner');
+                        inners.forEach(inner => inner.classList.add('reveal'));
+                    }, 50);
 
-                // Reveal navigation bar
-                setTimeout(() => {
-                    document.getElementById('navbar').classList.add('reveal');
-                }, 50);
+                    // Reveal navigation bar
+                    setTimeout(() => {
+                        document.getElementById('navbar').classList.add('reveal');
+                    }, 50);
 
-                // Reveal toggles
-                setTimeout(() => {
-                    document.getElementById('toggle-wrapper').classList.add('reveal');
-                }, 900);
+                    // Reveal toggles
+                    setTimeout(() => {
+                        document.getElementById('toggle-wrapper').classList.add('reveal');
+                    }, 900);
 
-                // Reveal subtext
-                setTimeout(() => {
-                    document.getElementById('hero-subtext').classList.add('reveal');
-                }, 1100);
+                    // Reveal subtext
+                    setTimeout(() => {
+                        document.getElementById('hero-subtext').classList.add('reveal');
+                    }, 1100);
+                }
             });
         }
 
@@ -541,6 +581,27 @@
                 revealObserver.observe(section);
             });
             
+            const preloaderShown = sessionStorage.getItem('preloader-shown');
+            if (preloaderShown) {
+                if (preloader) preloader.style.display = 'none';
+                startEntranceAnimations(true);
+                if (heroContainer) {
+                    heroContainer.classList.add('bg-reveal');
+                    heroContainer.style.transition = 'none';
+                }
+                
+                // Scroll smoothly to target hash if defined in URL on load
+                if (window.location.hash) {
+                    const targetEl = document.querySelector(window.location.hash);
+                    if (targetEl) {
+                        setTimeout(() => {
+                            lenis.scrollTo(targetEl, { duration: 1.0, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+                        }, 100);
+                    }
+                }
+                return;
+            }
+            
             // Wait slightly for the loading progress line animation to complete
             setTimeout(() => {
                 if (preloader) preloader.classList.add('fade-out');
@@ -559,6 +620,8 @@
                 setTimeout(() => {
                     if (preloader) preloader.style.display = 'none';
                 }, 1500);
+                
+                sessionStorage.setItem('preloader-shown', 'true');
             }, 2100); // 2.1s preloading stage
         }
 
