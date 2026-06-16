@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club 19 The Gym | Premium Fitness Sanctuary</title>
+    <meta name="description" content="Club 19 The Gym | Elite personal coaching, premium strength & conditioning, and luxury wellness facilities in Madurai. Elevate your potential today.">
+    <!-- Modern Premium Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.8">
+</head>
+<body class="night-active">
+    <!-- Spotlight mouse glow -->
+    <div class="spotlight-glow" id="spotlight-glow"></div>
+
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <!-- Preloader Screen -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="maison_etoile_logo.jpg" alt="Club 19 Logo" class="preloader-logo-image">
+                <span class="preloader-text">Club 19</span>
+            </div>
+            <div class="preloader-line-container">
+                <div class="preloader-line" id="preloader-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo" id="logo-link">
+                <img src="maison_etoile_logo.jpg" alt="Club 19 Logo" class="logo-image">
+                <span class="logo-text">Club 19</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#about-us" class="nav-link">About</a>
+                <a href="#how-it-works" class="nav-link">Programs</a>
+                <a href="#trainers" class="nav-link">Trainers</a>
+                <a href="#reviews" class="nav-link">Review</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:+917845738595" class="nav-cta-btn btn-contact" id="cta-phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                        <path d="M20 22.621c-2.483 0-5.834-1.282-10.457-5.905S1.282 7.517 1.282 5.033c0-3.32 1.96-4.033 3.666-4.033 1.134 0 1.867.755 2.215 1.541l2.25 5.074c.338.761.054 1.637-.621 2.083l-1.477.985c.983 2.193 2.766 3.977 4.961 4.96l.984-1.477c.446-.676 1.322-.96 2.083-.621l5.074 2.25c.786.348 1.541 1.081 1.541 2.215 0 1.706-.713 3.666-4.033 3.666z"/>
+                    </svg>
+                    <span class="btn-text">+91 78457 38595</span>
+                </a>
+                <a href="https://instagram.com/club19thegym" target="_blank" class="nav-cta-btn btn-instagram" id="cta-instagram">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                    <span class="btn-text">Instagram</span>
+                </a>
+                <a href="https://wa.me/917845738595" target="_blank" class="nav-cta-btn btn-whatsapp" id="cta-whatsapp">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 2.766 1.42 4.887 1.421 5.373 0 9.747-4.375 9.75-9.754.002-2.607-1.011-5.059-2.852-6.903-1.843-1.842-4.29-2.853-6.899-2.854-5.385 0-9.76 4.379-9.763 9.759-.001 2.125.496 3.257 1.468 4.888L2.15 19.348l6.732-1.763.506.29c1.644.975 2.656 1.291 3.976 1.291zM17.15 13.91c-.302-.15-1.782-.88-2.062-.982-.28-.102-.483-.153-.686.15-.203.303-.787.983-.965 1.185-.178.203-.356.228-.658.077-.302-.15-1.274-.47-2.426-1.496-.897-.8-1.502-1.788-1.68-2.09-.178-.302-.019-.465.132-.615.136-.135.302-.35.453-.526.15-.177.2-.303.302-.505.101-.202.05-.378-.025-.529-.076-.15-.686-1.654-.94-2.264-.247-.595-.503-.514-.686-.523-.178-.009-.38-.01-.583-.01-.203 0-.533.076-.813.379-.28.303-1.066 1.042-1.066 2.541 0 1.498 1.091 2.946 1.243 3.149.152.203 2.148 3.28 5.204 4.602.727.314 1.294.502 1.737.643.73.232 1.393.199 1.918.12.584-.087 1.782-.728 2.036-1.431.254-.702.254-1.303.178-1.43-.076-.128-.28-.204-.583-.355z"/>
+                    </svg>
+                    <span class="btn-text">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="hero-container" id="hero-container">
+        <!-- Background Layers for smooth crossfade -->
+        <div class="hero-bg-parallax">
+            <div class="hero-bg morning-bg"></div>
+            <div class="hero-bg night-bg"></div>
+        </div>
+
+        <!-- Hero Content Wrapper (Right Aligned) -->
+        <div class="hero-content-wrapper">
+            <div class="hero-content-right">
+                <h1 class="hero-headline">
+                    <span class="headline-outline" id="headline-line1">Unleash Your Power</span>
+                    <span class="headline-solid" id="headline-line2">at Club 19 The Gym</span>
+                </h1>
+                
+                <p class="hero-subtext" id="hero-subtext">
+                    Experience absolute physical elite-level training at Club 19 The Gym, where premium fitness meets luxury recovery, customized to your athletic lifestyle.
+                </p>
+                
+                <div class="toggle-wrapper" id="toggle-wrapper">
+                    <!-- View in Map Button -->
+                    <a href="https://maps.google.com/?q=Club+19+The+Gym+ponni+nagar+madurai" target="_blank" class="toggle-pill" id="btn-maps">
+                        <!-- Map Pin SVG Icon -->
+                        <svg class="toggle-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        <div class="toggle-text-group">
+                            <span class="toggle-title">View in Map</span>
+                            <span class="toggle-subtitle">Find our location</span>
+                        </div>
+                    </a>
+                    <!-- Join Button -->
+                    <a href="https://wa.me/917845738595?text=I%20want%20to%20join%20Club%2019%20The%20Gym" target="_blank" class="toggle-pill active" id="btn-join">
+                        <!-- Join/User Plus SVG Icon -->
+                        <svg class="toggle-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <line x1="20" y1="8" x2="20" y2="14"/>
+                            <line x1="23" y1="11" x2="17" y2="11"/>
+                        </svg>
+                        <div class="toggle-text-group">
+                            <span class="toggle-title">Join</span>
+                            <span class="toggle-subtitle">Start training today</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Content Wrapper (Slides up and over the sticky Hero section) -->
+    <div class="content-wrapper" id="content-wrapper">
+
+        <!-- 3. About Us Section -->
+        <section class="section reveal-mask" id="about-us">
+            <div class="section-container">
+                <div class="about-grid stagger-item">
+                    <div class="about-visual">
+                        <div class="about-image-overlay"></div>
+                        <div class="about-badge">Club 19 Philosophy</div>
+                    </div>
+                    <div class="about-content">
+                        <span class="section-subtitle">Our Standard</span>
+                        <h2 class="section-title">Luxury Fitness Redefined</h2>
+                        <p class="about-text">
+                            We believe that premium fitness is built on elite guidance and world-class equipment. Club 19 The Gym was founded as Madurai's pinnacle fitness sanctuary, offering an uncompromising training experience. We provide personalized high-performance coaching, state-of-the-art biomechanical equipment, and dynamic recovery programs.
+                        </p>
+                        <p class="about-text">
+                            By merging advanced sports science with luxury hospitality, we offer a wellness sanctuary where physical transformation and premium recovery coexist without compromise.
+                        </p>
+                        <div class="about-stats">
+                            <div class="about-stat">
+                                <span class="about-stat-num">100%</span>
+                                <span class="about-stat-desc">Personal Guidance</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">Elite</span>
+                                <span class="about-stat-desc">Coaching Standard</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="about.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. How It Works Section -->
+        <section class="section reveal-mask" id="how-it-works">
+            <div class="section-container">
+                <div class="section-header stagger-item">
+                    <span class="section-subtitle">Forging Excellence</span>
+                    <h2 class="section-title">Our Programs</h2>
+                </div>
+                
+                <div class="grid-4x stagger-item">
+                    <div class="glass-card">
+                        <div class="card-icon">01</div>
+                        <h3 class="card-title">Strength & Conditioning</h3>
+                        <p class="card-description">Build high-performance muscle, power, and movement capacity with state-of-the-art weights and elite coaching.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon">02</div>
+                        <h3 class="card-title">Hypertrophy & Tone</h3>
+                        <p class="card-description">Sculpt your physique using biomechanically optimized premium machines under personal guidance.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon">03</div>
+                        <h3 class="card-title">Athletic Recovery</h3>
+                        <p class="card-description">Enhance muscle repair and joint health with private steam therapy, ice plunges, and stretch sessions.</p>
+                    </div>
+                    <div class="glass-card">
+                        <div class="card-icon">04</div>
+                        <h3 class="card-title">Nutritional Design</h3>
+                        <p class="card-description">Fuel your progress with tailored diet plans, premium supplement stacks, and professional body metrics tracking.</p>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="programs.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Trainers Section -->
+        <section class="section reveal-mask" id="trainers">
+            <div class="section-container">
+                <div class="section-header stagger-item">
+                    <span class="section-subtitle">Elite Coaching</span>
+                    <h2 class="section-title">Our Certified Trainers</h2>
+                </div>
+                
+                <div class="grid-3x stagger-item">
+                    <div class="case-card">
+                        <div class="case-image-wrapper">
+                            <div class="case-image trainer1-bg"></div>
+                            <div class="case-badge">Strength Coach</div>
+                        </div>
+                        <div class="case-content">
+                            <h3 class="case-title">Marcus Vance</h3>
+                            <p class="case-meta">Head of Strength & Conditioning</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">10+ Yrs</span>
+                                    <span class="stat-label">Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">Certified</span>
+                                    <span class="stat-label">NSCA-CSCS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-image-wrapper">
+                            <div class="case-image trainer2-bg"></div>
+                            <div class="case-badge">Cardio & HIIT</div>
+                        </div>
+                        <div class="case-content">
+                            <h3 class="case-title">Clara Oswald</h3>
+                            <p class="case-meta">HIIT & Athletic Performance Lead</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">Competitive</span>
+                                    <span class="stat-label">Athlete Bio</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">Certified</span>
+                                    <span class="stat-label">NASM-PES</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-card">
+                        <div class="case-image-wrapper">
+                            <div class="case-image trainer3-bg"></div>
+                            <div class="case-badge">Yoga & Recovery</div>
+                        </div>
+                        <div class="case-content">
+                            <h3 class="case-title">Sarah Jenkins</h3>
+                            <p class="case-meta">Yoga Therapist & Mobility Specialist</p>
+                            <div class="case-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">Private</span>
+                                    <span class="stat-label">Coaching</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">Certified</span>
+                                    <span class="stat-label">RYT-500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="trainers.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Review Section -->
+        <section class="section reveal-mask" id="reviews">
+            <div class="section-container">
+                <div class="section-header stagger-item">
+                    <span class="section-subtitle">Member Feedback</span>
+                    <h2 class="section-title">Customer Reviews</h2>
+                </div>
+                
+                <div class="grid-2x stagger-item">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Club 19 is not just a gym; it is a total lifestyle upgrade. Training with their biomechanically optimized machines and accessing the recovery lounge post-workout has been incredible."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Clara Oswald</span>
+                            <span class="author-title">Competitive Athlete</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "I expected typical gym compromises. Instead, I found top-tier coaching, absolute clean training zones, and private steam/ice recovery facilities. Absolute value for money."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Marcus Vance</span>
+                            <span class="author-title">Entrepreneur</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="reviews.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Pricing Section -->
+        <section class="section reveal-mask" id="pricing">
+            <div class="section-container">
+                <div class="section-header stagger-item">
+                    <span class="section-subtitle">Membership Plans</span>
+                    <h2 class="section-title">Pricing & Packages</h2>
+                </div>
+                
+                <div class="grid-2x stagger-item">
+                    <div class="career-card">
+                        <div class="career-meta">
+                            <span class="career-dept">12-Month Plan</span>
+                            <span class="career-loc">Premium Access</span>
+                        </div>
+                        <h3 class="career-title">Elite Annual Membership</h3>
+                        <p class="career-description">Unlimited access to all strength zones, cardio decks, and group fitness classes. Includes 6 custom personal training sessions and monthly body composition assessments.</p>
+                        <a href="https://wa.me/917845738595?text=I%20am%20interested%20in%20the%20Elite%20Annual%20Membership" target="_blank" class="career-link" id="career-link-1">Select Elite Tier <span class="arrow">→</span></a>
+                    </div>
+                    
+                    <div class="career-card">
+                        <div class="career-meta">
+                            <span class="career-dept">Customized Plan</span>
+                            <span class="career-loc">All-Inclusive VIP</span>
+                        </div>
+                        <h3 class="career-title">VIP Club 19 Platinum</h3>
+                        <p class="career-description">All-access membership plus 1-on-1 premium daily personal training, tailored nutritional program design, private locker service, and unlimited access to the steam & ice recovery spa.</p>
+                        <a href="https://wa.me/917845738595?text=I%20am%20interested%20in%20the%20VIP%20Club%2019%20Platinum%20Membership" target="_blank" class="career-link" id="career-link-2">Select VIP Platinum <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="pricing.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Schedule Section -->
+        <section class="section reveal-mask" id="schedule">
+            <div class="section-container">
+                <div class="section-header stagger-item">
+                    <span class="section-subtitle">Weekly Classes</span>
+                    <h2 class="section-title">Group Fitness Schedule</h2>
+                </div>
+                
+                <div class="grid-3x stagger-item">
+                    <div class="resource-card">
+                        <span class="resource-type">Strength</span>
+                        <h3 class="resource-title">Powerlifting & Strength</h3>
+                        <p class="resource-excerpt">Master proper compound lift mechanics, squat-bench-deadlift progressions, and metabolic conditioning loops with certified coaches.</p>
+                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20Powerlifting%20and%20Strength%20class%20schedule" target="_blank" class="resource-action" id="resource-download-1">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-type">Endurance</span>
+                        <h3 class="resource-title">HIIT & Skillmill Training</h3>
+                        <p class="resource-excerpt">High-intensity athletic conditioning intervals utilizing premium curved manual treadmills, rowers, and dynamic weight circuits.</p>
+                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20HIIT%20and%20Skillmill%20class%20schedule" target="_blank" class="resource-action" id="resource-download-2">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                    <div class="resource-card">
+                        <span class="resource-type">Flexibility</span>
+                        <h3 class="resource-title">Yoga & Core Mobility</h3>
+                        <p class="resource-excerpt">Improve posture, target functional core strength, and enhance overall joint range of motion through athletic mobility protocols.</p>
+                        <a href="https://wa.me/917845738595?text=I%20want%20to%20view%20the%20Yoga%20and%20Core%20Mobility%20class%20schedule" target="_blank" class="resource-action" id="resource-download-3">View Schedule <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                <div class="view-more-container stagger-item">
+                    <a href="schedule.html" class="view-more-btn">View More <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal-mask" id="contact">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="#" class="logo" id="footer-logo-link">
+                        <img src="maison_etoile_logo.jpg" alt="Club 19 Logo" class="logo-image">
+                        <span class="logo-text">Club 19</span>
+                    </a>
+                    <p class="footer-desc">Madurai's pinnacle premium fitness and recovery sanctuary.</p>
+                    <div class="footer-status">
+                        <span class="status-pulse"></span>
+                        <span class="status-text">Open Daily — Mon-Sat: 5AM - 10PM, Sun: 6AM - 12PM</span>
+                    </div>
+                </div>
+                
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Club 19</h4>
+                        <a href="#hero-container" class="footer-link">Home</a>
+                        <a href="#about-us" class="footer-link">About</a>
+                        <a href="#how-it-works" class="footer-link">Programs</a>
+                        <a href="#trainers" class="footer-link">Trainers</a>
+                        <a href="#reviews" class="footer-link">Reviews</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Schedule</h4>
+                        <a href="#schedule" class="footer-link">Classes</a>
+                        <a href="#pricing" class="footer-link">Pricing</a>
+                        <a href="https://instagram.com/club19thegym" target="_blank" class="footer-link">Instagram</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Contact</h4>
+                        <span class="footer-contact-info">club19thegym@gmail.com</span>
+                        <span class="footer-contact-info">+91 78457 38595</span>
+                        <span class="footer-contact-info">+91 78458 38595</span>
+                        <span class="footer-contact-info" style="font-size: 11px; line-height: 1.4;">22A, Hotel jayasakthi 1st floor (above thalapakatti), ponni nagar, madurai - 625016</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-container">
+                    <span class="copyright">© 2026 Club 19 The Gym. All rights reserved.</span>
+                    <div class="footer-legal">
+                        <a href="#privacy" class="footer-legal-link">Privacy Policy</a>
+                        <a href="#terms" class="footer-legal-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Lenis Smooth Scroll Library -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+    <!-- Interactive script to showcase toggle functionality, parallax & entrance reveals -->
+    <script>
+        const heroContainer = document.getElementById('hero-container');
+
+        // Entrance animation (Word splitting/Blur/Mask reveals) for the Hero section
+        function startEntranceAnimations() {
+            const headlineLine1 = document.getElementById('headline-line1');
+            const headlineLine2 = document.getElementById('headline-line2');
+            
+            function splitTextIntoWords(element, startDelay) {
+                const text = element.textContent;
+                element.innerHTML = '';
+                const words = text.split(' ');
+                words.forEach((word, index) => {
+                    const mask = document.createElement('span');
+                    mask.className = 'word-mask';
+                    
+                    const inner = document.createElement('span');
+                    inner.className = 'word-inner';
+                    inner.textContent = word + (index < words.length - 1 ? '\u00A0' : ''); // Preserve whitespace
+                    inner.style.transitionDelay = `${startDelay + (index * 90)}ms`;
+                    
+                    mask.appendChild(inner);
+                    element.appendChild(mask);
+                });
+            }
+
+            // Stagger line 1 first, then line 2
+            if (headlineLine1) splitTextIntoWords(headlineLine1, 150);
+            if (headlineLine2) splitTextIntoWords(headlineLine2, 500);
+
+            // Trigger animations
+            requestAnimationFrame(() => {
+                // Reveal headline words
+                setTimeout(() => {
+                    const inners = document.querySelectorAll('.word-inner');
+                    inners.forEach(inner => inner.classList.add('reveal'));
+                }, 50);
+
+                // Reveal navigation bar
+                setTimeout(() => {
+                    document.getElementById('navbar').classList.add('reveal');
+                }, 50);
+
+                // Reveal toggles
+                setTimeout(() => {
+                    document.getElementById('toggle-wrapper').classList.add('reveal');
+                }, 900);
+
+                // Reveal subtext
+                setTimeout(() => {
+                    document.getElementById('hero-subtext').classList.add('reveal');
+                }, 1100);
+            });
+        }
+
+        // Parallax Scroll Performance Listener
+        let lastKnownScrollPosition = 0;
+        let ticking = false;
+
+        function updateParallax(scrollPos) {
+            const heroHeight = window.innerHeight;
+            const scrollRatio = Math.min(scrollPos / heroHeight, 1);
+            document.body.style.setProperty('--scroll-ratio', scrollRatio.toFixed(4));
+        }
+
+        window.addEventListener('scroll', () => {
+            lastKnownScrollPosition = window.scrollY;
+
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateParallax(lastKnownScrollPosition);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // IntersectionObserver for Mask Reveal sections
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Stop observing once revealed to ensure smooth performance
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            root: null, // Default viewport
+            threshold: 0, // Trigger as soon as the element enters the viewport
+            rootMargin: '0px 0px -60px 0px' // Offset bottom margin for a more dynamic feel
+        });
+
+        // Preloader reveal and orchestration
+        function initReveal() {
+            const preloader = document.getElementById('preloader');
+            
+            // Observe the sections that should wipe open
+            document.querySelectorAll('.reveal-mask').forEach(section => {
+                revealObserver.observe(section);
+            });
+            
+            // Wait slightly for the loading progress line animation to complete
+            setTimeout(() => {
+                if (preloader) preloader.classList.add('fade-out');
+                
+                // Start the main page entrance reveals exactly as the preloader slides away
+                setTimeout(() => {
+                    startEntranceAnimations();
+                }, 300); // sync with slide exit
+                
+                // Trigger the cinematic background reveal after the texts are fully visible
+                setTimeout(() => {
+                    if (heroContainer) heroContainer.classList.add('bg-reveal');
+                }, 1700); // 1.7 seconds after entrance reveals start
+                
+                // Clean up preloader from DOM after transition completes
+                setTimeout(() => {
+                    if (preloader) preloader.style.display = 'none';
+                }, 1500);
+            }, 2100); // 2.1s preloading stage
+        }
+
+        // --- Premium Interactive Effects Implementation ---
+
+        // 1. Lenis Smooth Inertia Scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+            smoothTouch: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Bind Lenis scroll to parallax logic
+        lenis.on('scroll', (e) => {
+            updateParallax(window.scrollY);
+        });
+
+        // 2. Logo / Brand smooth scroll to top
+        const logoLink = document.getElementById('logo-link');
+        const footerLogoLink = document.getElementById('footer-logo-link');
+        const scrollToTop = (e) => {
+            e.preventDefault();
+            lenis.scrollTo(0, { duration: 1.5 });
+        };
+        if (logoLink) logoLink.addEventListener('click', scrollToTop);
+        if (footerLogoLink) footerLogoLink.addEventListener('click', scrollToTop);
+
+        // Smooth scroll for all navigation links via Lenis
+        document.querySelectorAll('.nav-link, .footer-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        lenis.scrollTo(targetEl, { duration: 1.4, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+                    }
+                }
+            });
+        });
+
+        // 3. Custom Cursor & Spotlight coordinates
+        const cursor = document.getElementById('custom-cursor');
+        const cursorDot = document.getElementById('custom-cursor-dot');
+        
+        let mouseX = -100, mouseY = -100;
+        let cursorX = -100, cursorY = -100;
+        let dotX = -100, dotY = -100;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            // Set spotlight CSS variables
+            document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        });
+
+        // Animate custom cursor with lerp
+        function tickCursor() {
+            cursorX += (mouseX - cursorX) * 0.12;
+            cursorY += (mouseY - cursorY) * 0.12;
+            if (cursor) {
+                cursor.style.left = `${cursorX}px`;
+                cursor.style.top = `${cursorY}px`;
+            }
+
+            dotX += (mouseX - dotX) * 0.35;
+            dotY += (mouseY - dotY) * 0.35;
+            if (cursorDot) {
+                cursorDot.style.left = `${dotX}px`;
+                cursorDot.style.top = `${dotY}px`;
+            }
+
+            requestAnimationFrame(tickCursor);
+        }
+        requestAnimationFrame(tickCursor);
+
+        // Handle hover state class updates for interactive links
+        function registerCursorHovers() {
+            const hoverables = document.querySelectorAll('a, button, .toggle-pill, .logo, .cta-button, .career-link, .resource-action, .nav-cta-btn');
+            hoverables.forEach(el => {
+                // Ensure no double listeners
+                el.removeEventListener('mouseenter', onHoverEnter);
+                el.removeEventListener('mouseleave', onHoverLeave);
+                
+                el.addEventListener('mouseenter', onHoverEnter);
+                el.addEventListener('mouseleave', onHoverLeave);
+            });
+        }
+
+        function onHoverEnter() {
+            if (cursor) cursor.classList.add('hovered');
+        }
+
+        function onHoverLeave() {
+            if (cursor) cursor.classList.remove('hovered');
+        }
+
+        // Register hovers on DOM loaded
+        registerCursorHovers();
+
+        // 4. Magnetic Element pull logic
+        function setupMagneticElements() {
+            const magneticItems = document.querySelectorAll('.cta-button, .toggle-pill, .logo, .nav-cta-btn');
+            magneticItems.forEach(el => {
+                el.addEventListener('mousemove', (e) => {
+                    const rect = el.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    el.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+                });
+
+                el.addEventListener('mouseleave', () => {
+                    el.style.transform = 'translate(0px, 0px)';
+                    el.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+                });
+
+                el.addEventListener('mouseenter', () => {
+                    el.style.transition = 'none';
+                });
+            });
+        }
+        setupMagneticElements();
+
+        // 5. Buttery Smooth 3D Hover Tilt logic
+        function setup3DTilt() {
+            const tiltCards = document.querySelectorAll('.glass-card, .case-card, .career-card, .resource-card, .testimonial-card, .about-visual');
+            
+            tiltCards.forEach(card => {
+                let targetRotateX = 0;
+                let targetRotateY = 0;
+                let currentRotateX = 0;
+                let currentRotateY = 0;
+                let isHovered = false;
+                
+                card.addEventListener('mousemove', (e) => {
+                    isHovered = true;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    // Tilt max ~8 degrees
+                    targetRotateX = -(y - centerY) / 8;
+                    targetRotateY = (x - centerX) / 8;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    isHovered = false;
+                    targetRotateX = 0;
+                    targetRotateY = 0;
+                });
+
+                card.addEventListener('mouseenter', () => {
+                    isHovered = true;
+                });
+
+                function updateCardTilt() {
+                    const dx = targetRotateX - currentRotateX;
+                    const dy = targetRotateY - currentRotateY;
+
+                    // Smooth LERP interpolation
+                    currentRotateX += dx * 0.08;
+                    currentRotateY += dy * 0.08;
+
+                    if (isHovered || Math.abs(dx) > 0.01 || Math.abs(dy) > 0.01) {
+                        const scale = isHovered ? 1.03 : 1;
+                        card.style.transform = `perspective(1000px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) scale3d(${scale}, ${scale}, ${scale})`;
+                        card.style.transition = 'none';
+                    } else {
+                        currentRotateX = targetRotateX;
+                        currentRotateY = targetRotateY;
+                        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    }
+
+                    requestAnimationFrame(updateCardTilt);
+                }
+
+                requestAnimationFrame(updateCardTilt);
+            });
+        }
+        setup3DTilt();
+
+
+
+        if (document.readyState === 'complete') {
+            initReveal();
+        } else {
+            window.addEventListener('load', initReveal);
+        }
+    </script>
+</body>
+</html>

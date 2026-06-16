@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews | Club 19 The Gym</title>
+    <meta name="description" content="Read authentic success stories and detailed feedback from members at Club 19. Experience Madurai's elite training and premium recovery standards.">
+    <!-- Modern Premium Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.8">
+    <style>
+        /* Extra styles for Reviews page */
+        .metric-card {
+            padding: 30px;
+            border-radius: 14px;
+            background-color: var(--color-bg-card);
+            border: 1px solid var(--color-border-card);
+            text-align: left;
+        }
+    </style>
+</head>
+<body class="night-active">
+    <!-- Spotlight mouse glow -->
+    <div class="spotlight-glow" id="spotlight-glow"></div>
+
+    <!-- Custom Cursor elements -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar reveal" id="navbar" style="opacity: 1; transform: translateY(0);">
+        <div class="navbar-container">
+            <a href="index.html" class="logo" id="logo-link">
+                <img src="maison_etoile_logo.jpg" alt="Club 19 Logo" class="logo-image">
+                <span class="logo-text">Club 19</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html#about-us" class="nav-link">About</a>
+                <a href="index.html#how-it-works" class="nav-link">Programs</a>
+                <a href="index.html#trainers" class="nav-link">Trainers</a>
+                <a href="index.html#reviews" class="nav-link">Review</a>
+                <a href="index.html#pricing" class="nav-link">Pricing</a>
+                <a href="index.html#schedule" class="nav-link">Schedule</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:+917845738595" class="nav-cta-btn btn-contact" id="cta-phone">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                        <path d="M20 22.621c-2.483 0-5.834-1.282-10.457-5.905S1.282 7.517 1.282 5.033c0-3.32 1.96-4.033 3.666-4.033 1.134 0 1.867.755 2.215 1.541l2.25 5.074c.338.761.054 1.637-.621 2.083l-1.477.985c.983 2.193 2.766 3.977 4.961 4.96l.984-1.477c.446-.676 1.322-.96 2.083-.621l5.074 2.25c.786.348 1.541 1.081 1.541 2.215 0 1.706-.713 3.666-4.033 3.666z"/>
+                    </svg>
+                    <span class="btn-text">+91 78457 38595</span>
+                </a>
+                <a href="https://instagram.com/club19thegym" target="_blank" class="nav-cta-btn btn-instagram" id="cta-instagram">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.062 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                    <span class="btn-text">Instagram</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero">
+        <span class="subpage-hero-subtitle">Success Stories</span>
+        <h1 class="subpage-hero-title" id="reviews-hero-title">Customer Reviews</h1>
+    </section>
+
+    <!-- Content Wrapper -->
+    <div class="content-wrapper" id="content-wrapper" style="box-shadow: none;">
+        <!-- Aurora Waves Backdrop Canvas -->
+        <canvas id="aurora-canvas" class="aurora-canvas" style="opacity: 1;"></canvas>
+
+        <section class="section">
+            <div class="section-container">
+                
+                <!-- Bento Testimonial Grid -->
+                <div class="bento-grid stagger-item revealed" style="margin-bottom: 80px;">
+                    
+                    <!-- Review 1: Featured 2x Span -->
+                    <div class="testimonial-card bento-span-2" style="padding: 40px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #E2B65C; letter-spacing: 0.5px;">Elite Level Athletic Program</span>
+                        </div>
+                        <p class="testimonial-text" style="font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+                            "Club 19 has completely transformed my perspective on fitness training. The state-of-the-art biomechanical machines are incredibly smooth and prevent joint strain, while the coaches ensure perfect form on every lift. Having access to the private steam room and cold plunge post-workout has significantly improved my recovery times. Highly recommended for anyone looking for a clean, distraction-free environment!"
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name" style="font-size: 14px; font-weight: 700; color: #FFFFFF;">Clara Oswald</span>
+                            <span class="author-title">Competitive Athlete</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2: Single Column -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text" style="font-size: 13.5px; line-height: 1.6; margin-bottom: 20px;">
+                            "I have trained in premium gyms across major cities, but Club 19 stands out. Meticulous cleanliness, zero crowd wait times, and high sports science coaching competency. It is worth every rupee."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Marcus Vance</span>
+                            <span class="author-title">Entrepreneur</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3: Single Column -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text" style="font-size: 13.5px; line-height: 1.6; margin-bottom: 20px;">
+                            "Recovering from a shoulder injury was critical. The range-of-motion assessments and fascial stretch therapy here rebuilt my confidence and strength safely. The coaching standard is truly elite!"
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Sarah Jenkins</span>
+                            <span class="author-title">Physiotherapist</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4: Featured 2x Span -->
+                    <div class="testimonial-card bento-span-2" style="padding: 40px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <div class="testimonial-rating">★★★★★</div>
+                            <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #E2B65C; letter-spacing: 0.5px;">Premium Recovery Standard</span>
+                        </div>
+                        <p class="testimonial-text" style="font-size: 16px; line-height: 1.8; margin-bottom: 25px;">
+                            "I signed up for the VIP Club 19 Platinum tier, and it has been the best health decision I have made. Having a dedicated personal coach tracking my nutrition plans, joint availability indicators, and post-session recovery loops has taken away all the guesswork. It feels more like a private, premium health sanctuary than a typical crowded gym floor."
+                        </p>
+                        <div class="testimonial-author">
+                            <span class="author-name" style="font-size: 14px; font-weight: 700; color: #FFFFFF;">Deepika Raj</span>
+                            <span class="author-title">Architect</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid with Progress Loaders -->
+                <h3 style="font-size: 24px; font-weight: 800; color: #FFFFFF; text-align: center; margin-bottom: 40px; letter-spacing: -0.5px;">Performance Audits</h3>
+                <div class="grid-3x stagger-item revealed" style="margin-bottom: 80px;">
+                    
+                    <div class="metric-card">
+                        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #E2B65C; letter-spacing: 0.5px;">Strength Gains</span>
+                        <span style="font-size: 32px; font-weight: 800; color: #FFFFFF; display: block; margin-top: 5px;">+45%</span>
+                        <p style="font-size: 13px; color: #A3A3A3; line-height: 1.5; margin-top: 10px;">
+                            Average compound lift capacity increase within the first 6 months of coaching plans.
+                        </p>
+                        <div class="metric-progress-container">
+                            <div class="metric-progress-header">
+                                <span>Progress Rate</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="metric-bar-bg">
+                                <div class="metric-bar-fill" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #E2B65C; letter-spacing: 0.5px;">Adipose Loss</span>
+                        <span style="font-size: 32px; font-weight: 800; color: #FFFFFF; display: block; margin-top: 5px;">-8.4%</span>
+                        <p style="font-size: 13px; color: #A3A3A3; line-height: 1.5; margin-top: 10px;">
+                            Average systemic body fat percentage loss tracked on InBody composition files.
+                        </p>
+                        <div class="metric-progress-container">
+                            <div class="metric-progress-header">
+                                <span>Progress Rate</span>
+                                <span>84%</span>
+                            </div>
+                            <div class="metric-bar-bg">
+                                <div class="metric-bar-fill" style="width: 84%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <span style="font-size: 11px; text-transform: uppercase; font-weight: 700; color: #E2B65C; letter-spacing: 0.5px;">Member Retention</span>
+                        <span style="font-size: 32px; font-weight: 800; color: #FFFFFF; display: block; margin-top: 5px;">98.6%</span>
+                        <p style="font-size: 13px; color: #A3A3A3; line-height: 1.5; margin-top: 10px;">
+                            Retention and membership renewal rates across Elite and VIP Platinum memberships.
+                        </p>
+                        <div class="metric-progress-container">
+                            <div class="metric-progress-header">
+                                <span>Progress Rate</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="metric-bar-bg">
+                                <div class="metric-bar-fill" style="width: 98%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Google Maps Review CTA Card -->
+                <div class="glass-card stagger-item revealed" style="padding: 50px; text-align: center; border-color: rgba(226, 182, 92, 0.25);">
+                    <h3 style="font-size: 26px; font-weight: 800; color: #FFFFFF; margin-bottom: 12px; letter-spacing: -0.5px;">Share Your Club 19 Story</h3>
+                    <p style="font-size: 14.5px; color: #A3A3A3; max-width: 500px; margin: 0 auto 30px; line-height: 1.6;">
+                        Help other fitness enthusiasts discover Club 19 by sharing your training, results, and recovery experience.
+                    </p>
+                    <a href="https://maps.google.com/?q=Club+19+The+Gym+ponni+nagar+madurai" target="_blank" class="view-more-btn" style="background-color: #E2B65C; color: #0c0e0d; border-color: #E2B65C;">Write a Google Review <span class="arrow">→</span></a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal revealed" id="contact" style="background-color: #060707;">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" id="footer-logo-link">
+                        <img src="maison_etoile_logo.jpg" alt="Club 19 Logo" class="logo-image">
+                        <span class="logo-text">Club 19</span>
+                    </a>
+                    <p class="footer-desc">Madurai's pinnacle premium fitness and recovery sanctuary.</p>
+                    <div class="footer-status">
+                        <span class="status-pulse"></span>
+                        <span class="status-text">Open Daily — Mon-Sat: 5AM - 10PM, Sun: 6AM - 12PM</span>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Club 19</h4>
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="index.html#about-us" class="footer-link">About</a>
+                        <a href="index.html#how-it-works" class="footer-link">Programs</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Schedule</h4>
+                        <a href="index.html#schedule" class="footer-link">Classes</a>
+                        <a href="index.html#pricing" class="footer-link">Pricing</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4 class="footer-col-title">Contact</h4>
+                        <span class="footer-contact-info">club19thegym@gmail.com</span>
+                        <span class="footer-contact-info">+91 78457 38595</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-container">
+                    <span class="copyright">© 2026 Club 19 The Gym. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lenis Smooth Scroll Library -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="live-background.js"></script>
+    <script>
+        // Cinematic Word Reveal Animation for Hero Title
+        function initSubpageHeroReveal() {
+            const heroTitle = document.getElementById('reviews-hero-title');
+            if (!heroTitle) return;
+            
+            const text = heroTitle.textContent;
+            heroTitle.innerHTML = '';
+            const words = text.split(' ');
+            
+            words.forEach((word, index) => {
+                const mask = document.createElement('span');
+                mask.style.display = 'inline-block';
+                mask.style.overflow = 'hidden';
+                mask.style.verticalAlign = 'top';
+                
+                const inner = document.createElement('span');
+                inner.style.display = 'inline-block';
+                inner.textContent = word + (index < words.length - 1 ? '\u00A0' : '');
+                inner.style.transform = 'translateY(100%)';
+                inner.style.filter = 'blur(10px)';
+                inner.style.opacity = '0';
+                inner.style.transition = 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1s cubic-bezier(0.16, 1, 0.3, 1), opacity 1s cubic-bezier(0.16, 1, 0.3, 1)';
+                inner.style.transitionDelay = `${100 + (index * 120)}ms`;
+                
+                mask.appendChild(inner);
+                heroTitle.appendChild(mask);
+                
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        inner.style.transform = 'translateY(0)';
+                        inner.style.filter = 'blur(0)';
+                        inner.style.opacity = '1';
+                    }, 50);
+                });
+            });
+        }
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            initSubpageHeroReveal();
+        });
+        
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            initSubpageHeroReveal();
+        }
+
+        // Custom Cursor & Spotlight coordinates
+        const cursor = document.getElementById('custom-cursor');
+        const cursorDot = document.getElementById('custom-cursor-dot');
+        
+        let mouseX = -100, mouseY = -100;
+        let cursorX = -100, cursorY = -100;
+        let dotX = -100, dotY = -100;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        });
+
+        function tickCursor() {
+            cursorX += (mouseX - cursorX) * 0.12;
+            cursorY += (mouseY - cursorY) * 0.12;
+            if (cursor) {
+                cursor.style.left = `${cursorX}px`;
+                cursor.style.top = `${cursorY}px`;
+            }
+
+            dotX += (mouseX - dotX) * 0.35;
+            dotY += (mouseY - dotY) * 0.35;
+            if (cursorDot) {
+                cursorDot.style.left = `${dotX}px`;
+                cursorDot.style.top = `${dotY}px`;
+            }
+            requestAnimationFrame(tickCursor);
+        }
+        requestAnimationFrame(tickCursor);
+
+        // Hover handlers
+        function registerCursorHovers() {
+            const hoverables = document.querySelectorAll('a, button, .logo, .nav-cta-btn, .view-more-btn');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovered'));
+                el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovered'));
+            });
+        }
+        registerCursorHovers();
+
+        // Lenis Smooth Inertia Scrolling
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smoothWheel: true,
+        });
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+
+
+        // 3D tilt logic
+        function setup3DTilt() {
+            const tiltCards = document.querySelectorAll('.testimonial-card, .metric-card, .glass-card');
+            tiltCards.forEach(card => {
+                let targetRotateX = 0, targetRotateY = 0, currentRotateX = 0, currentRotateY = 0, isHovered = false;
+                card.addEventListener('mousemove', (e) => {
+                    isHovered = true;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    targetRotateX = -(y - centerY) / 8;
+                    targetRotateY = (x - centerX) / 8;
+                });
+                card.addEventListener('mouseleave', () => { isHovered = false; targetRotateX = 0; targetRotateY = 0; });
+                function updateCardTilt() {
+                    const dx = targetRotateX - currentRotateX;
+                    const dy = targetRotateY - currentRotateY;
+                    currentRotateX += dx * 0.08;
+                    currentRotateY += dy * 0.08;
+                    if (isHovered || Math.abs(dx) > 0.01 || Math.abs(dy) > 0.01) {
+                        const scale = isHovered ? 1.03 : 1;
+                        card.style.transform = `perspective(1000px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) scale3d(${scale}, ${scale}, ${scale})`;
+                    } else {
+                        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    }
+                    requestAnimationFrame(updateCardTilt);
+                }
+                requestAnimationFrame(updateCardTilt);
+            });
+        }
+        setup3DTilt();
+    </script>
+</body>
+</html>
