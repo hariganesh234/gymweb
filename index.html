@@ -640,7 +640,7 @@
                 // Trigger the cinematic background reveal after the texts are fully visible
                 setTimeout(() => {
                     if (heroContainer) heroContainer.classList.add('bg-reveal');
-                }, 1700); // 1.7 seconds after entrance reveals start
+                }, window.innerWidth <= 1024 ? 200 : 1700); // Reveal background sooner on mobile (200ms) than desktop (1.7s)
                 
                 // Clean up preloader from DOM after transition completes
                 setTimeout(() => {

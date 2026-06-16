@@ -231,6 +231,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* Fallback for modern mobile viewports */
     position: sticky;
     top: 0;
     justify-content: space-between;
@@ -689,11 +690,44 @@ body.night-active .headline-outline {
     .toggle-wrapper {
         justify-content: center;
     }
+    
+    /* Mobile Background Attachment Bugfix for Subpages */
+    .subpage-hero {
+        background-attachment: scroll !important;
+        background-position: center center !important;
+    }
+    
+    /* Simplify Homepage Hero animations on mobile to prevent blank/flickering GPU rendering bugs */
+    .hero-bg {
+        filter: none !important;
+        transform: scale(1) !important;
+        transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    
+    .hero-bg-parallax {
+        transform: none !important;
+    }
 }
 
 @media (max-width: 768px) {
+    .hero-container {
+        height: 100dvh;
+        min-height: -webkit-fill-available;
+    }
+
     .hero-content-wrapper {
-        padding: 90px 24px 20px;
+        padding: 80px 20px 20px !important;
+    }
+    
+    .hero-headline {
+        font-size: clamp(32px, 8vw, 44px) !important;
+        letter-spacing: -1px !important;
+        gap: 8px !important;
+    }
+    
+    .hero-subtext {
+        font-size: 14.5px !important;
+        line-height: 1.6 !important;
     }
     
     .toggle-wrapper {
@@ -705,6 +739,31 @@ body.night-active .headline-outline {
     .toggle-pill {
         max-width: 100%;
         padding: 14px 20px;
+    }
+    
+    /* Header CTA buttons mobile optimization (convert to premium circular icon badges) */
+    .nav-cta {
+        gap: 10px !important;
+    }
+    
+    .nav-cta-btn {
+        width: 38px !important;
+        height: 38px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .nav-cta-btn .btn-text {
+        display: none !important;
+    }
+    
+    .nav-cta-btn svg {
+        margin-right: 0 !important;
+        width: 16px !important;
+        height: 16px !important;
     }
 }
 
