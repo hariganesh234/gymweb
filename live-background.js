@@ -14,4 +14,46 @@
             }
         });
     });
+
+    // Mobile Menu implementation
+    function initMobileMenu() {
+        const navbarContainer = document.querySelector('.navbar-container');
+        if (navbarContainer && !document.querySelector('.hamburger-menu')) {
+            const hamburger = document.createElement('button');
+            hamburger.className = 'hamburger-menu';
+            hamburger.id = 'hamburger-menu';
+            hamburger.setAttribute('aria-label', 'Toggle Menu');
+            hamburger.innerHTML = `
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            `;
+            navbarContainer.appendChild(hamburger);
+            
+            const navbar = document.getElementById('navbar');
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('mobile-menu-active');
+                if (navbar.classList.contains('mobile-menu-active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+            
+            // Close menu when navigation links are clicked
+            const navLinks = navbar.querySelectorAll('.nav-menu .nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('mobile-menu-active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+        initMobileMenu();
+    }
 })();
