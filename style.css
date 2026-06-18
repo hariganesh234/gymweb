@@ -797,7 +797,7 @@ body.night-active .headline-outline {
         width: 100% !important;
         height: 100% !important;
         background-size: cover !important;
-        background-position: left center !important; /* Focus on the left side of the image (man on the bench) */
+        background-position: 30% center !important; /* Focus slightly off-center left (man on the bench) */
         filter: none !important;
         transform: none !important;
         transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
