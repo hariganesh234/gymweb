@@ -16,6 +16,11 @@
     --color-text-secondary: #6B7280;
     --color-text-tertiary: #9CA3AF;
     
+    /* Grid & ambient lights for Morning theme */
+    --color-bg-grid: rgba(30, 34, 32, 0.015);
+    --color-glow-1: rgba(226, 182, 92, 0.04);
+    --color-glow-2: rgba(129, 140, 248, 0.03);
+    
     /* CTA Variables (Morning) */
     --color-cta-bg: #0F1110;
     --color-cta-text: #FFFFFF;
@@ -58,6 +63,11 @@ body.night-active {
     --color-cta-hover-text: #FFFFFF;
     --color-cta-hover-border: #FFFFFF;
     --color-cta-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    
+    /* Grid & ambient lights for Night theme */
+    --color-bg-grid: rgba(255, 255, 255, 0.01);
+    --color-glow-1: rgba(226, 182, 92, 0.06);
+    --color-glow-2: rgba(99, 102, 241, 0.04);
 }
 
 body {
@@ -881,10 +891,45 @@ body.night-active .headline-outline {
     position: relative;
     z-index: 2;
     background-color: var(--color-bg-page);
-    transition: background-color 1.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    background-image: 
+        linear-gradient(var(--color-bg-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-bg-grid) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-attachment: local;
+    transition: background-color 1.2s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.08);
     width: 100%;
     overflow: hidden;
+}
+
+/* Subtle, premium glowing ambient lights floating in the background */
+.content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: -10vw;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, var(--color-glow-1) 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+    transition: background 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.content-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    right: -10vw;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--color-glow-2) 0%, transparent 70%);
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+    transition: background 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Card hover glow border highlight */
